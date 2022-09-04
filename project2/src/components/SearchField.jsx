@@ -1,13 +1,11 @@
 import { BsSearch } from 'react-icons/bs'
 import styles from './SearchField.module.scss'
 import logo from './../img/logo.png'
-import { useState } from 'react'
 
-const SearchField = () => {
-  const [searchTerm, setSearchTerm] = useState('')
+const SearchField = ({ setSearchTerm, refetch, searchTerm }) => {
   const handleEnterSearch = e => {
     if ((e.key = 'Enter')) {
-      console.log(searchTerm)
+      refetch()
     }
   }
 
