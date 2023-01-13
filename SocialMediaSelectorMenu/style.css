@@ -27,6 +27,12 @@ body {
 
 .menu p {
   margin: 0 10px;
+  display: flex;
+  align-items: center;
+}
+
+.menu .fa-solid {
+  transition: transform 0.2s;
 }
 
 .social-lists {
@@ -57,4 +63,8 @@ body {
 
 .rotate .fa-solid {
   transform: rotate(180deg);
+}
+
+.hide {
+  visibility: hidden;
 }
