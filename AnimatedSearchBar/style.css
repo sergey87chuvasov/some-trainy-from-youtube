@@ -19,6 +19,7 @@ body {
     -6px -6px 10px rgba(198, 187, 187, 0.7);
   margin: 10px;
   position: relative;
+  transition: width 1.5s;
 }
 
 .magnifier {
@@ -33,14 +34,19 @@ body {
   cursor: pointer;
   position: absolute;
   right: 15px;
+  transition: width 0.4s;
+  transition-delay: 0.8s;
 }
 
 .input {
   background-color: transparent;
   border: none;
   margin: 10px 50px;
+  width: 100%;
   outline: none;
   color: rgb(82, 78, 78);
+  transition: width 0.9s;
+  transition-delay: 0.5s;
 }
 
 .active.search-bar-container {
