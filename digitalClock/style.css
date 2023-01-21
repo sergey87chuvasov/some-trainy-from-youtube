@@ -10,6 +10,7 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
+  overflow: hidden;
 }
 
 h2 {
@@ -17,7 +18,7 @@ h2 {
   letter-spacing: 4px;
   font-size: 19px;
   text-align: center;
-  color: rgb(125, 31, 31);
+  color: rgb(100, 47, 47);
 }
 
 .clock {
@@ -57,5 +58,5 @@ h2 {
   width: 60px;
   height: 30px;
   font-size: 15px;
-  background: rgb(72, 79, 72);
+  background: rgb(147, 79, 23);
 }
