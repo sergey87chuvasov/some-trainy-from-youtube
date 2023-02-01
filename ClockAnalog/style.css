@@ -81,7 +81,7 @@ img {
 
 .arrows div {
   position: absolute;
-  background-color: white;
+  background-color: rgb(192, 172, 172);
   width: 7px;
   height: 120px;
   transform-origin: bottom center;
@@ -100,5 +100,5 @@ img {
 
 .arrows .second {
   transform: rotate(250deg);
-  background-color: goldenrod;
+  background-color: rgb(243, 184, 36);
 }
