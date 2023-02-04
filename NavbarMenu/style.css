@@ -1,0 +1,95 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  background-color: rgb(202, 215, 211);
+  line-height: 2.4;
+  font-size: 18px;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+nav {
+  background-color: rgb(240, 236, 231);
+  box-shadow: 0 2px 17px rgba(0, 0, 0, 0.5);
+}
+
+.fa-bars {
+  font-size: 25px;
+  color: rgb(116, 17, 17);
+  cursor: pointer;
+}
+
+.fa-bars:hover {
+  color: rgb(29, 27, 27);
+}
+
+.menu a {
+  color: rgb(90, 87, 87);
+  letter-spacing: 2px;
+  display: block;
+  padding: 10px 5px;
+  transition: all 0.3s linear;
+}
+
+.menu a:hover {
+  background-color: rgb(149, 109, 123);
+  color: rgb(106, 153, 215);
+  padding-left: 25px;
+}
+
+.nav-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px;
+}
+
+.menu {
+  height: 0;
+  overflow: hidden;
+  transition: all 0.3s linear;
+}
+
+.show-menu {
+  height: 200px;
+}
+
+@media (min-width: 800px) {
+  .nav-main {
+    max-width: 1170px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px;
+  }
+  .nav-header {
+    padding: 0;
+  }
+  .fa-bars {
+    display: none;
+  }
+
+  .menu {
+    height: auto;
+    display: flex;
+  }
+
+  .menu a {
+    padding: 0;
+    margin: 0 15px;
+  }
+
+  .menu a:hover {
+    padding: 0;
+    background: transparent;
+  }
+}
