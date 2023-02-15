@@ -1,0 +1,43 @@
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Times New Roman', Times, serif;
+  height: 100vh;
+  background-color: rgb(110, 110, 133);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h2 {
+  font-size: 70px;
+  color: rgb(51, 65, 65);
+}
+
+.section {
+  text-align: center;
+}
+
+.btn {
+  cursor: pointer;
+  font-size: 95px;
+  border: none;
+  background: rgb(255, 255, 255, 0.3);
+  border-radius: 15px;
+  padding: 15px;
+  filter: grayscale();
+  transition: filter 0.3s ease-in-out;
+}
+
+.btn:hover {
+  filter: grayscale(0);
+  color: rgb(83, 215, 215);
+}
+
+.name {
+  font-weight: 600;
+  color: rgb(120, 167, 167);
+  font-size: 28px;
+}
