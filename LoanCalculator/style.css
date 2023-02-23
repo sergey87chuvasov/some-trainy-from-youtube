@@ -1,0 +1,29 @@
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  height: 100vh;
+  background-color: rgb(232, 112, 69);
+  color: rgb(54, 54, 62);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  background-color: rgb(202, 230, 157);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.input {
+  width: 100%;
+  font-size: 22px;
+  height: 35px;
+}
+
+.payment {
+  font-weight: 600;
+  font-size: 22px;
+}
