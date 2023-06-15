@@ -21,6 +21,11 @@ body {
   box-shadow: 0 25px 40px #111119;
 }
 
+.item-box {
+  display: flex;
+  margin: 20px 40px;
+}
+
 .container .header {
   margin: auto;
   display: flex;
@@ -88,7 +93,97 @@ h2 {
   position: absolute;
   z-index: 2;
   top: 50%;
-  left: 50%;
+  left: -10%;
   font-size: 28px;
   transform: translate(-50%, -50%);
+}
+
+.btn.clicked .fa-cart-shopping {
+  animation: cart 1.5s ease-in-out forwards;
+}
+
+@keyframes cart {
+  0% {
+    left: -10%;
+  }
+  40%,
+  60% {
+    left: 50%;
+  }
+  100% {
+    left: 110%;
+  }
+}
+
+.btn .fa-box {
+  position: absolute;
+  z-index: 3;
+  top: -20%;
+  left: 52%;
+  transform: translate(-50%, -50%);
+  font-size: 1.2em;
+}
+
+.btn.clicked .fa-box {
+  animation: box 1.5s ease-in-out forwards;
+}
+
+@keyframes box {
+  0%,
+  40% {
+    top: -20%;
+  }
+  60% {
+    top: 40%;
+    left: 52%;
+  }
+  100% {
+    top: 40%;
+    left: 112%;
+  }
+}
+
+.addCart {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  font-size: 1.2em;
+  transform: translate(-50%, -50%);
+}
+
+.btn span.addCart {
+  opacity: 1;
+}
+
+.btn.clicked span.addCart {
+  animation: txt1 1.5s ease-in-out forwards;
+}
+
+@keyframes txt1 {
+  0% {
+    opacity: 1;
+  }
+  20%,
+  100% {
+    opacity: 0;
+  }
+}
+
+.btn span.added {
+  opacity: 0;
+  font-size: 18px;
+}
+
+.btn.clicked span.added {
+  animation: txt2 1.5s ease-in-out forwards;
+}
+
+@keyframes txt2 {
+  0%,
+  80% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
