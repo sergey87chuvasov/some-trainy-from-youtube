@@ -1,0 +1,94 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  background: linear-gradient(to bottom right, white, rgb(88, 88, 206));
+}
+
+.container {
+  width: 70%;
+  height: 85vh;
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 25px 40px #111119;
+}
+
+.container .header {
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  height: 15%;
+  align-items: center;
+}
+
+.header .heading {
+  font-size: 16px;
+}
+
+.header .action {
+  font-size: 14px;
+  color: red;
+  font-weight: 600;
+  border-bottom: 1px solid red;
+}
+
+.addtocart {
+  box-shadow: 0 0 2px rgb(6, 32, 6);
+  height: 400px;
+  width: 300px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-left: 25px;
+}
+
+img {
+  height: 150px;
+}
+
+h2 {
+  margin-top: 10px;
+}
+
+.btn {
+  position: relative;
+  padding: 10px;
+  width: 90%;
+  height: 50px;
+  margin-top: 10px;
+  background: #ed7878;
+  color: #fff;
+  outline: none;
+  border: none;
+  border-radius: 10px;
+  font-weight: 600;
+  transition: 0.3s ease-in-out;
+}
+
+.btn:hover {
+  background: #e4b1b1;
+}
+
+.btn:active {
+  transform: scale(0.9);
+}
+
+.btn .fa-cart-shopping {
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  left: 50%;
+  font-size: 28px;
+  transform: translate(-50%, -50%);
+}
