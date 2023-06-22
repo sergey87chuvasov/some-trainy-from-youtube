@@ -10,53 +10,53 @@
 
   <div class="drag">
     <div class="dragBox">
-      <div class="cross" id="cross1" draggable="true"></div>
+      <div class="cross" id="cross1" ondragstart="drag(event)" draggable="true"></div>
     </div>
     <div class="dragBox">
-      <div class="cross" id="cross2" draggable="true"></div>
+      <div class="cross" id="cross2" ondragstart="drag(event)" draggable="true"></div>
     </div>
     <div class="dragBox">
-      <div class="cross" id="cross3" draggable="true"></div>
+      <div class="cross" id="cross3" ondragstart="drag(event)" draggable="true"></div>
     </div>
     <div class="dragBox">
-      <div class="cross" id="cross4" draggable="true"></div>
+      <div class="cross" id="cross4" ondragstart="drag(event)" draggable="true"></div>
     </div>
     <div class="dragBox">
-      <div class="cross" id="cross5" draggable="true"></div>
+      <div class="cross" id="cross5" ondragstart="drag(event)" draggable="true"></div>
     </div>
   </div>
 
   <div class="board">
-    <div class="dropBox"></div>
-    <div class="dropBox"></div>
-    <div class="dropBox"></div>
-    <div class="dropBox"></div>
-    <div class="dropBox"></div>
-    <div class="dropBox"></div>
-    <div class="dropBox"></div>
-    <div class="dropBox"></div>
-    <div class="dropBox"></div>
+    <div class="dropBox" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+    <div class="dropBox" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+    <div class="dropBox" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+    <div class="dropBox" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+    <div class="dropBox" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+    <div class="dropBox" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+    <div class="dropBox" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+    <div class="dropBox" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+    <div class="dropBox" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
   </div>
 
   <div class="drag">
     <div class="dragBox">
-      <div class="circle" id="circle1" draggable="true"></div>
+      <div class="circle" id="circle1" ondragstart="drag(event)" draggable="true"></div>
     </div>
     <div class="dragBox">
-      <div class="circle" id="circle2" draggable="true"></div>
+      <div class="circle" id="circle2" ondragstart="drag(event)" draggable="true"></div>
     </div>
     <div class="dragBox">
-      <div class="circle" id="circle3" draggable="true"></div>
+      <div class="circle" id="circle3" ondragstart="drag(event)" draggable="true"></div>
     </div>
     <div class="dragBox">
-      <div class="circle" id="circle4" draggable="true"></div>
+      <div class="circle" id="circle4" ondragstart="drag(event)" draggable="true"></div>
     </div>
     <div class="dragBox">
-      <div class="circle" id="circle5" draggable="true"></div>
+      <div class="circle" id="circle5" ondragstart="drag(event)" draggable="true"></div>
     </div>
   </div>
 
-  <button></button>
+  <button class="reset">Reset Game</button>
   
 
   <script src="./script.js"></script>
