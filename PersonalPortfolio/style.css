@@ -20,6 +20,12 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 20px 10%;
+  z-index: 99;
+}
+
+.sticky {
+  background: #343232;
+  border: 2px solid #c0a4a41a;
 }
 
 .header a {
@@ -235,6 +241,7 @@ section {
   animation: zoom 1s ease-in forwards, float 4s ease-in infinite;
   animation-delay: 2s, 3s;
   opacity: 0;
+  width: 80%;
 }
 
 @keyframes zoom {
@@ -257,5 +264,57 @@ section {
   }
   100% {
     transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  section {
+    padding: 10rem 2% 0;
+  }
+  .home {
+    display: grid;
+  }
+  .navbar {
+    display: none;
+  }
+  .navbar a {
+    font-size: 20px;
+    margin: 48px 0;
+    display: block;
+  }
+  .navbar {
+    position: absolute;
+    left: 0;
+    top: 100%;
+    background: #343232;
+    padding: 1rem 3%;
+    width: 100%;
+    border-top: 1px solid rgba(255, 255, 255, 0.4);
+    box-shadow: 0 1px 16px rgba(255, 255, 255, 0.1);
+  }
+  .image-section img {
+    width: 45%;
+    margin: 0 auto;
+  }
+  .navbar.active {
+    display: block;
+  }
+  .header .menu {
+    display: block;
+  }
+  .text-section {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .btn-box {
+    height: 50px;
+    width: 200px;
+    margin-top: 20px;
+  }
+  .social-media {
+    top: 50%;
   }
 }
