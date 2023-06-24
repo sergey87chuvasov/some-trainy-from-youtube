@@ -1,0 +1,141 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background: #343232;
+  height: 100%;
+  width: 100%;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 10%;
+}
+
+.header a {
+  color: #fff;
+}
+
+.header .logo {
+  text-decoration: none;
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.navbar a {
+  font-size: 18px;
+  display: inline-block;
+  margin-left: 45px;
+  text-decoration: none;
+  font-weight: 500;
+  color: #fff;
+}
+
+.header .menu {
+  color: #fff;
+  font-size: 30px;
+  display: none;
+}
+
+.navbar a:hover {
+  color: #c1be1c;
+}
+
+.home {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100vh;
+}
+
+section {
+  padding: 10rem 9% 2rem;
+}
+
+.text-section {
+  color: #fff;
+  max-width: 700px;
+}
+
+.text-section h2 {
+  font-size: 50px;
+}
+
+.text-section h3 {
+  margin-top: 30px;
+  color: #c1be1c;
+}
+
+.text-section p {
+  margin-top: 20px;
+  color: #fff;
+}
+
+.btn-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  width: 150px;
+}
+
+.btn-box a {
+  display: flex;
+  color: #343232;
+  background: #c1be1c;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  border-radius: 8px;
+  margin-top: 20px;
+  border: 2px solid #c1be1c;
+  transition: 0.3s;
+}
+
+.btn-box a:hover {
+  color: #c1be1c;
+  background: #343232;
+}
+
+.social-media {
+  position: absolute;
+  left: 0;
+  top: 45%;
+  /* background: #c1be1c; */
+  display: grid;
+  font-size: 26px;
+}
+
+.social-media a {
+  color: #343232;
+}
+
+.social-media i {
+  padding: 10px 10px;
+  background: #c1be1c;
+  border: 2px solid #c1be1c;
+  margin-top: 10px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  transition: 0.3s;
+}
+
+.social-media i:hover {
+  background: #343232;
+}
