@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pagination</title>
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+  <div class="container">
+    <button class="previewBtn" onclick="sideSlide(-1)"><i class='bx bx-left-arrow-alt'></i></button>
+      <div class="number">
+        <span onclick="btnSlide(1)">1</span>
+        <span onclick="btnSlide(2)">2</span>
+        <span onclick="btnSlide(3)">3</span>
+        <span onclick="btnSlide(4)">4</span>
+        <span onclick="btnSlide(5)">5</span>
+        <span onclick="btnSlide(6)">6</span>
+        <span onclick="btnSlide(7)">7</span>
+        <span onclick="btnSlide(8)">8</span>
+        <span onclick="btnSlide(9)">9</span>
+        <span onclick="btnSlide(10)">10</span>
+      </div>
+    <button class="nextBtn" onclick="sideSlide(1)"><i class='bx bx-right-arrow-alt'></i></button>
+  </div>
+
+  <script src="./script.js"></script>
+</body>
+</html>

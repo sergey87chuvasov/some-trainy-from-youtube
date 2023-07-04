@@ -1,0 +1,60 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: rgb(113, 113, 202);
+}
+
+.container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 60px;
+  width: 670px;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 10px 10px 1px rgba(0, 0, 0, 0.4);
+}
+
+.number {
+  display: flex;
+}
+
+.number span {
+  height: 40px;
+  width: 40px;
+  /* background: red; */
+  margin-left: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50px;
+  font-weight: 500;
+  font-size: 20px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.container button {
+  border: none;
+  outline: none;
+  background: none;
+  cursor: pointer;
+  display: flex;
+}
+
+button i {
+  font-size: 35px;
+}
+
+button.active {
+  color: rgb(113, 113, 202);
+}
