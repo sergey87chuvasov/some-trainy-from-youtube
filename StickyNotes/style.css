@@ -42,7 +42,6 @@ body {
   background: #dfdf4b;
   padding: 20px;
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
-  font-family: 'Handlee', cursive;
 }
 
 .container .notes .note::before {
@@ -100,4 +99,10 @@ body {
   outline: none;
   font-size: 20px;
   resize: none;
+}
+
+.details h3 {
+  font-family: 'Handlee', cursive;
+  user-select: none;
+  font-size: 30px;
 }
