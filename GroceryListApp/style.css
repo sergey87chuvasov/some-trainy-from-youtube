@@ -83,3 +83,33 @@ body {
   font-size: 26px;
   height: 50px;
 }
+
+.container ol li .remove {
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  top: 5px;
+  right: 0;
+  border-radius: 50%;
+  background: url('minus.png');
+  background-size: cover;
+  cursor: pointer;
+}
+
+.container ol li.done p {
+  text-decoration: line-through;
+  color: rgba(0, 0, 0, 0.2);
+}
+
+.container ol li.done p::after {
+  content: '';
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  top: 5px;
+  right: 35px;
+  background: url('done.png');
+  border-radius: 50%;
+  background-size: cover;
+  cursor: pointer;
+}
