@@ -1,0 +1,39 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  background: #111;
+  overflow: hidden;
+}
+
+.logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 60vw;
+}
+
+.lines {
+  position: absolute;
+  height: 100vh;
+  background: #ff4000;
+  z-index: 100;
+  mix-blend-mode: color-dodge;
+  width: 50px;
+  animation: animate 2s linear infinite;
+}
+
+@keyframes animate {
+  0%,
+  100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
