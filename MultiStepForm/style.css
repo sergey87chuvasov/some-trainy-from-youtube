@@ -1,0 +1,84 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: linear-gradient(45deg, rgb(206, 190, 83), rgb(0, 234, 255));
+}
+
+.container {
+  width: 330px;
+  background: #fff;
+  border-radius: 5px;
+  text-align: center;
+  padding: 50px 35px 10px 35px;
+}
+
+.container header {
+  font-size: 35px;
+  font-weight: 600;
+  margin: 0 0 30px 0;
+}
+
+.container .form-outer {
+  width: 100%;
+}
+
+.form-outer form {
+  display: flex;
+  width: 400%;
+}
+
+.form-outer form .page {
+  width: 25%;
+}
+
+.form-outer form .page .title {
+  text-align: left;
+  font-size: 25px;
+  font-weight: 500;
+}
+
+.form-outer form .page .field {
+  position: relative;
+  height: 45px;
+  width: 330px;
+  margin: 45px 0;
+}
+
+.form-outer form .page .field .label {
+  position: absolute;
+  top: -30px;
+  font-weight: 500;
+}
+
+.form-outer form .page .field input {
+  height: 100%;
+  width: 100%;
+  border: 1px solid lightblue;
+  border-radius: 5px;
+  font-size: 18px;
+  padding-left: 15px;
+}
+
+.form-outer form .page .field button {
+  width: 100%;
+  height: calc(100% + 5px);
+  margin-top: -20px;
+  border: none;
+  background: #d5cbcb;
+  color: #fff;
+  font-size: 18px;
+  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: 1px;
+  border-radius: 5px;
+  cursor: pointer;
+}
