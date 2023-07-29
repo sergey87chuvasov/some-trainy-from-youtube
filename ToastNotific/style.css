@@ -43,7 +43,7 @@ body {
   margin-bottom: 10px;
   background: var(--light);
   justify-content: space-between;
-  /* animation: show_toast 0.3s ease-in forwards; */
+  animation: show_toast 0.3s ease-in forwards;
 }
 
 @keyframes show_toast {
@@ -61,14 +61,33 @@ body {
   }
 }
 
+.notifications .toast.hide {
+  animation: hide_toast 0.3s ease-in forwards;
+}
+
+@keyframes hide_toast {
+  0% {
+    transform: translateX(-10px);
+  }
+  40% {
+    transform: translateX(0%);
+  }
+  80% {
+    transform: translateX(-5%);
+  }
+  100% {
+    transform: translateX(calc(100% + 20px));
+  }
+}
+
 .toast::before {
   position: absolute;
   content: '';
   height: 3px;
   bottom: 0;
   left: 0;
-  width: 50%;
-  /* animation: progress 5s linear forwards; */
+  width: 100%;
+  animation: progress 5s linear forwards;
 }
 
 @keyframes progress {
@@ -140,4 +159,22 @@ body {
   margin: 0 5px;
   font-size: 20px;
   cursor: pointer;
+}
+
+@media screen and (max-width: 530px) {
+  .notifications {
+    width: 95%;
+  }
+
+  .notifications .toast {
+    width: 100%;
+    font-size: 12px;
+    margin-left: 20px;
+  }
+
+  .buttons .btn {
+    margin: 0 1px;
+    font-size: 18px;
+    padding: 8px 15px;
+  }
 }
