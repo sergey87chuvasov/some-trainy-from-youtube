@@ -92,7 +92,7 @@ const SomeInput = () => {
     //   return;
     // }
 
-    if (!isEnteredNameValid) {
+    if (!isEnteredNameValid || isEnteredEmailValid) {
       return;
     }
 
