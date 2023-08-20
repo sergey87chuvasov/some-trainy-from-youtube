@@ -78,15 +78,36 @@ header {
   background: #fff;
 }
 
+.blur-bg-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  pointer-events: none;
+  backdrop-filter: blur(5px);
+}
+
 .form-popup {
   position: fixed;
   top: 50%;
   left: 50%;
   max-width: 720px;
   width: 100%;
+  opacity: 0;
+  pointer-events: none;
   background: #fff;
   border: 2px solid #fff;
   transform: translate(-50%, -50%);
+}
+
+.form-popup .close-btn {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  color: #878484;
+  cursor: pointer;
 }
 
 .form-popup .form-box {
@@ -95,6 +116,26 @@ header {
 
 .form-box .form-details {
   max-width: 330px;
+  width: 100%;
+  color: #fff;
+  text-align: center;
+  display: flex;
+  padding: 0 20px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.login .form-details {
+  background: url('./images/login-img.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.signup .form-details {
+  background: url('./images/signup-img.jpg');
+  background-size: cover;
+  background-position: center;
 }
 
 .form-box h2 {
@@ -124,6 +165,14 @@ form .input-field input {
   border: 1px solid #717171;
 }
 
+.input-field input:focus {
+  color: #5087d4;
+}
+
+.input-field input:is(:focus, :valid) {
+  padding: 16px 15px 0;
+}
+
 form .input-field label {
   position: absolute;
   top: 50%;
@@ -138,4 +187,71 @@ form .input-field label {
   color: #5087d4;
   font-size: 0.75rem;
   transform: translateY(-120%);
+}
+
+.form-box a {
+  color: #5087d4;
+  text-decoration: none;
+}
+
+.form-box a:hover {
+  text-decoration: underline;
+}
+
+.form-box :where(.forgot-pass, .policy-text) {
+  display: inline-flex;
+  margin-top: 14px;
+  font-size: 0.95rem;
+}
+
+form button {
+  width: 100%;
+  outline: none;
+  border: none;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 14px 0;
+  border-radius: 3px;
+  margin: 25px 0;
+  color: #fff;
+  background: #5087d4;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+form button:hover {
+  background: #3c3ccc;
+}
+
+.form-box .bottom-link {
+  text-align: center;
+}
+
+.form-popup .signup {
+  display: none;
+}
+
+.signup .policy-text {
+  display: flex;
+  align-items: center;
+}
+
+.signup .policy-text input {
+  width: 14px;
+  height: 14px;
+  margin-right: 7px;
+}
+
+@media (max-width: 760px) {
+  .form-popup {
+    width: 95%;
+  }
+
+  .form-box .form-details {
+    display: none;
+  }
+
+  .form-box .form-content {
+    padding: 30px 20px;
+  }
 }

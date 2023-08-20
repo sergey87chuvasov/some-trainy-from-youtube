@@ -28,7 +28,10 @@
 
   <!-- FORM -->
 
-  <div class="form-popup">
+  <div class="blur-bg-overlay"></div>
+
+  <div class="form-popup login">
+    <span class="close-btn material-symbols-rounded">close</span>
     <div class="form-box">
       <div class="form-details">
         <h2>Welcome Back</h2>
@@ -51,6 +54,37 @@
         <div class="bottom-link">
           Don't have an account?
           <a href="#">Sign Up</a>
+        </div>
+      </div>
+    </div>
+
+     <div class="form-box signup">
+      <div class="form-details">
+        <h2>Create account</h2>
+        <p>To become a part of our community, please sign up using your personal information.</p>
+      </div>
+      <div class="form-content">
+        <h2>SIGNUP</h2>
+        <form action="#">
+          <div class="input-field">
+            <input type="text" required>
+            <label>Enter your email</label>
+          </div>
+          <div class="input-field">
+            <input type="password" required>
+            <label>Create password</label>
+          </div>
+          <div class="policy-text">
+            <input type="checkbox" id="policy">
+            <label for="policy">
+              I agree the <a href="#">Terms & Conditions</a>
+            </label>
+          </div>
+          <button type="submit">Sign Up</button>
+        </form>
+        <div class="bottom-link">
+          Already have an account?
+          <a href="#">Login</a>
         </div>
       </div>
     </div>
