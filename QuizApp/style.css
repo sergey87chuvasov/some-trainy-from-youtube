@@ -70,7 +70,7 @@ select {
 
 .btn:disabled {
   cursor: not-allowed;
-  background-color: #555151;
+  background-color: #b6abab;
 }
 
 .hide {
@@ -121,4 +121,97 @@ select {
   font-size: 25px;
   font-weight: 500;
   margin-bottom: 20px;
+}
+
+.question-wrapper .number .total {
+  color: #5a5656;
+  font-size: 18px;
+}
+
+.question-wrapper .question {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.answer-wrapper .answer {
+  width: 100%;
+  height: 60px;
+  padding: 20px;
+  border-radius: 10px;
+  color: #fff;
+  border: 3px solid #3c3c84;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  cursor: pointer;
+  transition: 0.3s linear;
+}
+
+.answer .checkbox {
+  width: 20px;
+  height: 20px;
+  font-size: 12px;
+  border-radius: 50%;
+  border: 3px solid #3c3c84;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s;
+}
+
+.answer .checkbox .icon {
+  opacity: 0;
+}
+
+.answer:hover .checkbox,
+.answer.selected .checkbox {
+  background-color: #6767a6;
+  border-color: #6767a6;
+}
+
+.answer.selected .checkbox .icon {
+  opacity: 1;
+}
+
+.answer.correct {
+  border-color: #58cd58;
+}
+
+.answer.wrong {
+  border-color: #df3327;
+}
+
+.question-wrapper,
+.answer-wrapper {
+  margin-bottom: 50px;
+}
+
+.btn.next {
+  /* it will be shown whean answer will be submit */
+  display: none;
+}
+
+.end-screen .score {
+  color: #fff;
+  font-size: 25px;
+  font-weight: 500;
+  margin-bottom: 80px;
+  text-align: center;
+}
+
+.end-screen .score-text {
+  color: #878dab;
+  font-size: 16px;
+  margin-bottom: 120px;
+}
+
+@media (max-width: 468px) {
+  .container {
+    min-height: 100vh;
+    max-width: 100%;
+    border-radius: 0;
+  }
 }
