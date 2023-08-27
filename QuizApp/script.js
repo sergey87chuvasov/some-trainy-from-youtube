@@ -33,7 +33,7 @@ const startQuize = () => {
     .then((res) => res.json())
     .then((data) => {
       questions = data.results;
-      console.log(questions); //  [{…}, {…}, {…}, ...  {…}, {…}]
+      // console.log(questions); //  [{…}, {…}, {…}, ...  {…}, {…}]
 
       startscreen.classList.add('hide');
       quiz.classList.remove('hide');
@@ -109,7 +109,7 @@ const showQuestion = (question) => {
 
 const startTimer = (time) => {
   timer = setInterval(() => {
-    if (timer >= 0) {
+    if (time >= 0) {
       progress(time);
       time--;
     } else {
@@ -130,12 +130,90 @@ const checkAnswer = () => {
 
   // any answer select
   if (selectedAnswer) {
-    const answer = selectedAnswer.querySelector('.text');
+    const answer = selectedAnswer.querySelector('.text').innerHTML;
 
-    if (answer === question[currentQuestion - 1].correct_answer) {
+    if (answer === questions[currentQuestion - 1].correct_answer) {
       // if true
       score++;
       selectedAnswer.classList.add('correct');
+    } else {
+      selectedAnswer.classList.add('wrong');
+
+      const correctAnswer = document
+        .querySelectorAll('.answer')
+        .forEach((answer) => {
+          if (
+            answer.querySelector('.text').innerHTML ===
+            questions[currentQuestion - 1].correct_answer
+          ) {
+            answer.classList.add('correct');
+          }
+        });
     }
   }
+
+  // if time go out - answer check auto
+  else {
+    const correctAnswer = document
+      .querySelectorAll('.answer')
+      .forEach((answer) => {
+        if (
+          answer.querySelector('.text').innerHTML ===
+          questions[currentQuestion - 1].correct_answer
+        ) {
+          answer.classList.add('correct');
+        }
+      });
+  }
+
+  // block user to select next answers
+  const answerDiv = document.querySelectorAll('.answer');
+
+  answerDiv.forEach((answer) => {
+    answer.classList.add('checked');
+
+    // add checked class on all answer
+  });
+
+  // schow nrxt brn after submit
+  submitBtn.style.display = 'none';
+  nextBtn.style.display = 'block';
 };
+
+// show next quest
+
+nextBtn.addEventListener('click', () => {
+  nextQuestion();
+
+  // show submit btn on next quest and hide next btn
+  nextBtn.style.display = 'none';
+  submitBtn.style.display = 'block';
+});
+
+const nextQuestion = () => {
+  if (currentQuestion < questions.length) {
+    currentQuestion++;
+
+    //show quest
+    showQuestion(questions[currentQuestion - 1]);
+  } else {
+    // if all quest end
+    showScore();
+  }
+};
+
+const endScreen = document.querySelector('.end-screen');
+const finalScore = document.querySelector('.final-score');
+const totalScore = document.querySelector('.total-score');
+
+const showScore = () => {
+  endScreen.classList.remove('hide');
+  quiz.classList.add('hide');
+  finalScore.innerHTML = score;
+  totalScore.innerHTML = `/${questions.length}`;
+};
+
+const restartBtn = document.querySelector('.restart');
+restartBtn.addEventListener('click', () => {
+  window.location.reload();
+});
