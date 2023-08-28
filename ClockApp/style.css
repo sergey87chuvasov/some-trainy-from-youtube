@@ -294,3 +294,179 @@ body {
   text-transform: uppercase;
   background-color: var(--primary-color);
 }
+
+.toggle {
+  position: relative;
+  width: max-content;
+}
+
+.toggle .track {
+  width: 50px;
+  height: 25px;
+  border-radius: 25px;
+  background-color: #7dd1be;
+  cursor: pointer;
+  transition: all 0.3s ease-in;
+}
+
+.toggle .thumb {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 50px;
+  background-color: var(--primary-color);
+  top: 50%;
+  left: 2px;
+  cursor: pointer;
+  transform: translate(0, -50%);
+  transition: all 0e ease;
+  z-index: 1;
+}
+
+.toggle .checkbox:checked ~ .thumb {
+  left: 28px;
+  background-color: var(--bg-color);
+}
+
+.toggle .checkbox:checked ~ .track {
+  background-color: var(--primary-color);
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #78bbab;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 99;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s;
+}
+
+.modal.active {
+  opacity: 0.9;
+  visibility: visible;
+}
+
+.modal .content {
+  position: relative;
+  width: 400px;
+  background-color: var(--bg-color);
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 0 0 1px #207964, 0 3px 15px #408f7c;
+}
+
+.modal .content .head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.modal .head {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--primary-color);
+}
+
+.modal .close {
+  cursor: pointer;
+}
+
+.modal .body {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.modal .time {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.modal .time > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 30px;
+  font-weight: 700;
+  color: var(--primary-color);
+}
+
+.modal .time > div div:not(.number) {
+  cursor: pointer;
+}
+
+.modal .days {
+  display: flex;
+  gap: 10px;
+}
+
+.modal .day {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--primary-color);
+}
+
+.modal .day.active {
+  color: var(--bg-color);
+  background-color: var(--primary-color);
+}
+
+.modal .footer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.modal .footer .btn {
+  font-size: 12px;
+  font-weight: 700;
+  padding: 10px 20px;
+  border-radius: 5px;
+  color: var(--primary-color);
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.modal .footer .btn.save {
+  color: var(--bg-color);
+  background-color: var(--primary-color);
+}
+
+.modal .footer .btn.cancel {
+  color: var(--primary-color);
+  background-color: #a5dacd;
+}
+
+.modal input[type='text'] {
+  width: 100%;
+  height: 40px;
+  border-radius: 5px;
+  padding: 0 10px;
+  border: 1px solid #1e423a;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--primary-color);
+  outline: none;
+  transition: all 0.3s;
+}
