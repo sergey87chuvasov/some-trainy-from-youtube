@@ -23,6 +23,7 @@ body {
 }
 
 .tab_box {
+  position: relative;
   width: 100%;
   display: flex;
   justify-content: space-around;
@@ -40,14 +41,45 @@ body {
   cursor: pointer;
 }
 
+.tab_box .tab_btn.active {
+  color: green;
+}
+
 .content_box {
   padding: 20px;
 }
 
 .content_box .content {
   display: none;
+  animation: moving 0.5s ease-in;
+}
+
+@keyframes moving {
+  from {
+    transform: translateX(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
+.content_box .content.active {
+  display: block;
 }
 
 .content_box .content h2 {
   margin-bottom: 10px;
+}
+
+.line {
+  position: absolute;
+  top: 62px;
+  left: 17px;
+  width: 90px;
+  height: 5px;
+  background-color: green;
+  border-radius: 10px;
+  transition: all 0.3s ease-in-out;
 }
