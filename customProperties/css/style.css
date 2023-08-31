@@ -1,0 +1,119 @@
+:root {
+  --divider: 1450;
+  --sun: 1392000px;
+  --mercury: 4879px;
+  --venus: 12103;
+  --earth: 12742px;
+  --mars: 6780px;
+  --jupiter: 139822px;
+  --saturn: 116464px;
+  --uranus: 50724px;
+  --neptune: 49244px;
+}
+
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #111010;
+  width: 4000px;
+  overflow-x: scroll;
+}
+
+.system {
+  display: flex;
+  align-items: center;
+}
+
+.sphere {
+  border-radius: 50%;
+  margin: 5px;
+  background-position: center;
+  background-size: cover;
+}
+
+.sun {
+  background-image: url(../images/sun.png);
+  width: calc(var(--sun) / var(--divider));
+  height: calc(var(--sun) / var(--divider));
+}
+
+.mercury {
+  background-image: url(../images/mercury.png);
+  width: calc(var(--mercury) / var(--divider));
+  height: calc(var(--mercury) / var(--divider));
+}
+
+.venus {
+  background-image: url(../images/venus.png);
+  width: calc(var(--venus) / var(--divider));
+  height: calc(var(--venus) / var(--divider));
+}
+
+.earth {
+  background-image: url(../images/earth.png);
+  width: calc(var(--earth) / var(--divider));
+  height: calc(var(--earth) / var(--divider));
+}
+
+.mars {
+  background-image: url(../images/mars.png);
+  width: calc(var(--mars) / var(--divider));
+  height: calc(var(--mars) / var(--divider));
+}
+
+.jupiter {
+  background-image: url(../images/jupiter.png);
+  width: calc(var(--jupiter) / var(--divider));
+  height: calc(var(--jupiter) / var(--divider));
+}
+
+.saturn {
+  background-image: url(../images/saturn.png);
+  width: calc(var(--saturn) / var(--divider));
+  height: calc(var(--saturn) / var(--divider));
+}
+
+.uranus {
+  background-image: url(../images/uranus.png);
+  width: calc(var(--uranus) / var(--divider));
+  height: calc(var(--uranus) / var(--divider));
+}
+
+.neptune {
+  background-image: url(../images/neptune.png);
+  width: calc(var(--neptune) / var(--divider));
+  height: calc(var(--neptune) / var(--divider));
+}
+
+/* 1 */
+/* old variable - currentColor */
+/*  
+.test {
+  width: 300px;
+  color: blue;
+  padding: 20px;
+  border: 1px solid currentColor;
+}
+*/
+
+/* 2  - with scope to other block */
+
+/* .test {
+  --main-color: red;
+  --size: 25px;
+  width: 300px;
+  color: var(--main-color);
+  padding: var(--size);
+  border: 1px solid var(--main-color);
+  margin: var(--size);
+}
+*/
+
+/* see through all page */
+
+/*
+:root {
+  --backCl: #b9b9ec;
+} 
+*/
