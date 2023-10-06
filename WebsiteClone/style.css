@@ -25,7 +25,96 @@ header .navbar {
   justify-content: space-between;
 }
 
+.navbar .menu-links {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 30px;
+}
+
 .navbar .menu-links a {
   color: #fff;
   text-decoration: none;
+  transition: 0.2s ease-in;
+}
+
+.navbar .menu-links a:hover {
+  color: #19a463;
+}
+
+.navbar .menu-links .language-item a {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.navbar .menu-links .language-item span {
+  font-size: 1.3rem;
+}
+
+.navbar .menu-links .join-btn a {
+  border: 1px solid #fff;
+  border-radius: 4px;
+  padding: 8px 15px;
+}
+
+.navbar .menu-links .join-btn a:hover {
+  color: #fff;
+  background: #19a463;
+  border-color: transparent;
+}
+
+.hero-section {
+  height: 100vh;
+  background: url('./images/hero-img.jpg');
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  padding: 20px 0;
+}
+
+.hero-section .content {
+  max-width: 1400;
+  margin: 0 auto 40px;
+  width: 100%;
+}
+
+.hero-section .content h1 {
+  color: #fff;
+  font-size: 3rem;
+  max-width: 630px;
+}
+
+.hero-section .search-form {
+  display: flex;
+  height: 48px;
+  max-width: 630px;
+}
+
+.hero-section .search-form input {
+  width: 100%;
+  height: 100%;
+  outline: none;
+  border: none;
+  background: #fff;
+  font-size: 1rem;
+  padding: 0 15px;
+  border-radius: 4px 0 0 4px;
+}
+
+.hero-section .search-form button {
+  height: 100%;
+  width: 60px;
+  outline: none;
+  border: none;
+  color: #fff;
+  background: #1dbf73;
+  border-radius: 4px 0 0 4px;
+  cursor: pointer;
+  transition: 0.3 ease-in;
+}
+
+.hero-section .search-form button:hover {
+  background: #19a463;
 }
