@@ -49,5 +49,14 @@ body {
   content: '';
   position: absolute;
   inset: 0;
-  background: ;
+  background: var(--img);
+  background-size: cover;
+  background-position: center;
+  clip-path: circle(0px at 0 0);
+  z-index: 2;
+  transition: 0.5s;
+}
+
+.container .card:hover::after {
+  clip-path: circle(150px at var(--x) var(--y));
 }
