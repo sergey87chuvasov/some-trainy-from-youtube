@@ -2,7 +2,7 @@ import './Background.css';
 import video1 from '../../assets/video1.mp4';
 import image1 from '../../assets/image1.png';
 import image2 from '../../assets/image2.png';
-import image3 from '../../assets/image3.png';
+import image3 from '../../assets/image33.png';
 
 const Background = ({ playStatus, heroCount }) => {
   if (playStatus) {
@@ -15,7 +15,7 @@ const Background = ({ playStatus, heroCount }) => {
     return <img src={image1} className='background' />;
   } else if (heroCount === 1) {
     return <img src={image2} className='background' />;
-  } else if (heroCount === 3) {
+  } else if (heroCount === 2) {
     return <img src={image3} className='background' />;
   }
 };
