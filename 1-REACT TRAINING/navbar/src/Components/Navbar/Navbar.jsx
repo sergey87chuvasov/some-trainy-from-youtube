@@ -7,10 +7,21 @@ import search_icon_dark from '../../assets/search-b.png';
 import toogle_light from '../../assets/night.png';
 import toogle_dark from '../../assets/day.png';
 
-function Navbar() {
+function Navbar({ theme, setTheme }) {
+  const toogle_mode = () => {
+    theme == 'light' ? setTheme('dark') : setTheme('light');
+  };
+
   return (
     <div className='navbar'>
-      <img src={logo_light} alt='logo pic' className='logo' />
+      <img
+        onClick={() => {
+          toogle_mode();
+        }}
+        src={theme == 'light' ? logo_light : logo_dark}
+        alt='logo pic'
+        className='logo'
+      />
       <ul>
         <li>Home</li>
         <li>Products</li>
@@ -20,10 +31,20 @@ function Navbar() {
 
       <div className='search-box'>
         <input type='text' placeholder='Search' />
-        <img src={search_icon_light} alt='search pic' />
+        <img
+          src={theme == 'light' ? search_icon_light : search_icon_dark}
+          alt='search pic'
+        />
       </div>
 
-      <img src={toogle_light} alt='toogle pic' className='toggle-icon' />
+      <img
+        onClick={() => {
+          toogle_mode();
+        }}
+        src={theme == 'light' ? toogle_light : toogle_dark}
+        alt='toogle pic'
+        className='toggle-icon'
+      />
     </div>
   );
 }
