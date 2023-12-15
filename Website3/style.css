@@ -62,3 +62,96 @@ nav .logo {
   font-size: 13vw;
   line-height: 11vw;
 }
+
+.btn-container {
+  margin: 20px 0;
+}
+
+.header button {
+  border: 0;
+  outline: 0;
+  display: inline-flex;
+  align-items: center;
+  font-size: 18px;
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+.btn-dark {
+  background: #000;
+  color: #fff;
+  padding: 10px 10px 10px 30px;
+  border-radius: 40px;
+}
+
+.btn-dark img {
+  width: 40px;
+  background: #fff;
+  border-radius: 50%;
+  padding: 10px;
+  margin-left: 30px;
+}
+
+.btn-light {
+  background: transparent;
+  text-decoration: underline;
+}
+
+.btn-light img {
+  width: 20px;
+  margin-left: 10px;
+}
+
+.header p {
+  max-width: 360px;
+  font-weight: 500;
+}
+
+.user-img {
+  width: 80%;
+  max-width: 500px;
+  position: absolute;
+  right: 13%;
+  top: 150px;
+}
+
+/*animation*/
+.header h1 span {
+  background: linear-gradient(#000, #000);
+  background-repeat: no-repeat;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  background-size: 0%;
+}
+
+.header h1 span:first-child {
+  animation: textcolor1 2s linear infinite alternate;
+}
+
+.header h1 span:last-child {
+  animation: textcolor2 2s linear infinite alternate;
+}
+
+@keyframes textcolor1 {
+  0% {
+    background-size: 0%;
+  }
+  40% {
+    background-size: 100%;
+  }
+  100% {
+    background-size: 100%;
+  }
+}
+
+@keyframes textcolor2 {
+  0% {
+    background-size: 0%;
+  }
+  40% {
+    background-size: 0%;
+  }
+  100% {
+    background-size: 100%;
+  }
+}
