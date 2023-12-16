@@ -1,4 +1,9 @@
 let navbar = document.querySelector('nav');
+let menuLinks = document.getElementById('menu-links');
+
+function toogleMenu() {
+  menuLinks.classList.toogle('show-menu');
+}
 
 window.onscroll = function () {
   if (window.scrollY > 0) {
