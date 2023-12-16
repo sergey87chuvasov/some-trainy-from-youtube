@@ -112,7 +112,7 @@ nav .logo {
   max-width: 500px;
   position: absolute;
   right: 13%;
-  top: 150px;
+  top: 130px;
 }
 
 /*animation*/
@@ -192,5 +192,63 @@ nav .logo {
   .menu-icon {
     display: block;
     width: 30px;
+  }
+
+  .show-menu {
+    max-height: 60px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .header {
+    min-height: auto;
+    padding: 0;
+  }
+
+  .user-img {
+    width: 100%;
+    right: auto;
+    position: relative;
+    top: 75px;
+  }
+
+  .header-content {
+    position: absolute;
+    bottom: 0;
+    padding: 0 10%;
+    z-index: 2;
+    padding-bottom: 100px;
+    background: linear-gradient(transparent, #fff);
+  }
+
+  .btn-container {
+    margin: 5px 0;
+  }
+
+  .header button {
+    font-size: 14px;
+    margin-right: 10px;
+  }
+
+  .btn-dark {
+    padding: 7px 7px 7px 20px;
+    margin-bottom: 10px;
+  }
+
+  .btn-dark img {
+    width: 30px;
+    padding: 5px;
+    margin-left: 15px;
+  }
+
+  .btn-light img {
+    width: 12px;
+    margin-left: 5px;
+  }
+
+  .header h1 {
+    font-size: 70px;
+    line-height: 60px;
+    margin-bottom: 20px;
   }
 }
