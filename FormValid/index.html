@@ -25,17 +25,17 @@
 
       <div class="input-group">
         <label>Email Id</label>
-        <input type="email" placeholder="Enter Email">
+        <input type="email" placeholder="Enter Email" id="contact-email" onkeyup="validateEmail()">
         <span id="email-error"></span>
       </div>   
 
       <div class="input-group">
         <label>Your Message</label>
-        <textarea rows="5" placeholder="Enter your message"></textarea>
+        <textarea rows="5" placeholder="Enter your message" id="contact-message" onkeyup="validateMessage()"></textarea>
         <span id="message-error"></span>
       </div>
 
-    <button>SUBMIT</button>
+    <button onclick="return validateForm()">SUBMIT</button>
     <span id="submit-error"></span>
    
   </form>
