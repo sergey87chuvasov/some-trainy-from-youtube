@@ -90,3 +90,41 @@ body {
   bottom: 0;
   margin-block: auto;
 }
+
+.form__error {
+  position: absolute;
+  left: 1.5rem;
+  bottom: -1.5rem;
+  display: flex;
+  align-items: center;
+  column-gap: 0.25rem;
+  color: var(--error-color);
+
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s;
+}
+
+.form__error i {
+  font-size: 1rem;
+}
+
+.form__error span {
+  font-size: var(--small-font-size);
+  font-weight: 500;
+}
+
+.form__input:focus,
+.valid .form__input {
+  border-color: var(--active-color);
+  box-shadow: 0 8px 24px hsla(200, 70%, 56%, 0.3);
+}
+
+.invalid .form__input {
+  border-color: var(--error-color);
+  box-shadow: 0 8px 24px hsla(352, 65%, 52%, 0.3);
+}
+
+.invalid .form__error {
+  opacity: 1;
+}
